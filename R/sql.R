@@ -235,6 +235,7 @@ sqlSave <-
     isreal <- (types == "double")
     isint <- (types == "integer") & !facs
     islogi <- (types == "logical")
+    isdate <- sapply(dat, inherits, "Date")
     colspecs <- rep("varchar(255)", length(dat))
     if(!missing(typeInfo) ||
        !is.null(typeInfo <- typesR2DBMS[[odbcGetInfo(channel)[1L]]])) {
@@ -242,6 +243,7 @@ sqlSave <-
         colspecs[isreal] <- typeInfo$double[1L]
         colspecs[isint] <- typeInfo$integer[1L]
         colspecs[islogi] <- typeInfo$logical[1L]
+        colspecs[isdate] <- typeInfo$date[1L]
     } else {
         typeinfo <- sqlTypeInfo(channel, "all", errors = FALSE)
         if(is.data.frame(typeinfo)) {
