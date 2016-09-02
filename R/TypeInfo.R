@@ -55,7 +55,7 @@ typesR2DBMS <-
                   SQLite = list(double="double", integer="integer",
                   character="varchar(255)", logical="varchar(5)", date="date"),
                   EXCEL = list(double="NUMBER", integer="NUMBER",
-                  character="VARCHAR(255)", logical="LOGICAL"),
+                  character="VARCHAR(255)", logical="LOGICAL", date="DATE"),
                   DBASE = list(double="Numeric", integer="Numeric",
                   character="Char(254)", logical="Logical"),
                   "DB2/NT" = list(double="DOUBLE", integer="INTEGER",
