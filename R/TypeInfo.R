@@ -46,23 +46,23 @@ typesR2DBMS <-
                   character="VARCHAR(255)", logical="varchar(5)", date="DATE"),
                   ## float is double, real is single
                   "Microsoft SQL Server" = list(double="float", integer="int",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="date"),
                   PostgreSQL = list(double="float8", integer="int4",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="date"),
                   ## was double="double precision", integer="integer"
                   Oracle = list(double="binary_double", integer="decimal",
-                  character="varchar(255)", logical="varchar(5)"),
-                  SQLite = list(double="double", integer="integer",
                   character="varchar(255)", logical="varchar(5)", date="date"),
+                  SQLite = list(double="REAL", integer="INTEGER",
+                  character="TEXT", logical="TEXT", date="REAL"),
                   EXCEL = list(double="NUMBER", integer="NUMBER",
                   character="VARCHAR(255)", logical="LOGICAL", date="DATE"),
                   DBASE = list(double="Numeric", integer="Numeric",
-                  character="Char(254)", logical="Logical"),
+                  character="Char(254)", logical="Logical", date="Date"),
                   "DB2/NT" = list(double="DOUBLE", integer="INTEGER",
-                  character="VARCHAR(255)", logical="VARCHAR(5)"),
+                  character="VARCHAR(255)", logical="VARCHAR(5)", date="DATE"),
                   "Mimer SQL Engine" = list(double="DOUBLE PRECISION",
                   integer="INTEGER", character="VARCHAR(255)",
-                  logical="VARCHAR(5)")
+                  logical="VARCHAR(5)", date="DATE")
                   ))
 
 getSqlTypeInfo <- function(driver)
