@@ -53,7 +53,7 @@ typesR2DBMS <-
                   Oracle = list(double="binary_double", integer="decimal",
                   character="varchar(255)", logical="varchar(5)"),
                   SQLite = list(double="double", integer="integer",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="date"),
                   EXCEL = list(double="NUMBER", integer="NUMBER",
                   character="VARCHAR(255)", logical="LOGICAL"),
                   DBASE = list(double="Numeric", integer="Numeric",
