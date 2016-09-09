@@ -41,28 +41,28 @@ sqlTypeInfo <-
 typesR2DBMS <-
     list2env(list(
                   MySQL = list(double="double", integer="integer",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="double"),
                   ACCESS = list(double="DOUBLE", integer="INTEGER",
                   character="VARCHAR(255)", logical="varchar(5)", date="DATE"),
                   ## float is double, real is single
                   "Microsoft SQL Server" = list(double="float", integer="int",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="float"),
                   PostgreSQL = list(double="float8", integer="int4",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="float8"),
                   ## was double="double precision", integer="integer"
                   Oracle = list(double="binary_double", integer="decimal",
-                  character="varchar(255)", logical="varchar(5)"),
+                  character="varchar(255)", logical="varchar(5)", date="binary_double"),
                   SQLite = list(double="double", integer="integer",
-                  character="varchar(255)", logical="varchar(5)", date="date"),
+                  character="varchar(255)", logical="varchar(5)", date="double"),
                   EXCEL = list(double="NUMBER", integer="NUMBER",
                   character="VARCHAR(255)", logical="LOGICAL", date="DATE"),
                   DBASE = list(double="Numeric", integer="Numeric",
-                  character="Char(254)", logical="Logical"),
+                  character="Char(254)", logical="Logical", date="Numeric"),
                   "DB2/NT" = list(double="DOUBLE", integer="INTEGER",
-                  character="VARCHAR(255)", logical="VARCHAR(5)"),
+                  character="VARCHAR(255)", logical="VARCHAR(5)", date="DOUBLE"),
                   "Mimer SQL Engine" = list(double="DOUBLE PRECISION",
                   integer="INTEGER", character="VARCHAR(255)",
-                  logical="VARCHAR(5)")
+                  logical="VARCHAR(5)", date="DOUBLE PRECISION")
                   ))
 
 getSqlTypeInfo <- function(driver)
