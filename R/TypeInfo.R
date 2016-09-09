@@ -43,7 +43,7 @@ typesR2DBMS <-
                   MySQL = list(double="double", integer="integer",
                   character="varchar(255)", logical="varchar(5)", date="double"),
                   ACCESS = list(double="DOUBLE", integer="INTEGER",
-                  character="VARCHAR(255)", logical="LOGICAL", date="DATE"),
+                  character="VARCHAR(255)", logical="VARCHAR(5)", date="DATE"),
                   ## float is double, real is single
                   "Microsoft SQL Server" = list(double="float", integer="int",
                   character="varchar(255)", logical="varchar(5)", date="float"),
